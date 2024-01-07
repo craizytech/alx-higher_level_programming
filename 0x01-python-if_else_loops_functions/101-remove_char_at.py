@@ -9,4 +9,3 @@ def remove_char_at(str, n):
         str_copy.append(char)
     str_copy = "".join(str_copy)
     return str_copy
-
