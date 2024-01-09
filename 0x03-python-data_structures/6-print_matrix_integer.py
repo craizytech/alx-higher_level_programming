@@ -3,5 +3,8 @@ def print_matrix_integer(matrix=[[]]):
     """Function that prints a matrix of integers."""
     for elem in matrix:
         for num in elem:
-            print("{:d}".format(num), end=" ")
+            if num == elem[len(elem) - 1]:
+                print("{:d}".format(num), end="")
+            else:
+                print("{:d}".format(num), end=" ")
         print()
