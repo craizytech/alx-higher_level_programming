@@ -8,5 +8,5 @@ def safe_print_integer(value):
             return False
         print("{:d}".format(value))
         return True
-    except:
+    except TypeError:
         return False
