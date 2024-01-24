@@ -3,7 +3,7 @@ def safe_print_division(a, b):
     """Function that divides 2 integers and prints the result."""
     res = None
     try:
-        res =  a / b
+        res = a / b
         return res
     except ZeroDivisionError:
         return None
