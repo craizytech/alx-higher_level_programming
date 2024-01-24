@@ -2,18 +2,18 @@
 def list_division(my_list_1, my_list_2, list_length):
     """Function that divides element by element in 2 lists."""
     result = []
-    try:
-        for i in range(list_length):
+    for i in range(list_length):
+        try:
             res = my_list_1[i] / my_list_2[i]
+        except TypeError:
+            res = 0
+            print("wrong type")
+        except IndexError:
+            res = 0
+            print("out of range")
+        except ZeroDivisionError:
+            res = 0
+            print("division by 0")
+        finally:
             result.append(res)
-    except TypeError:
-        print("wrong type")
-        result.append(0)
-    except ZeroDivisionError:
-        print("division by 0")
-        result.append(0)
-    except IndexError:
-        print("out of range")
-        result.append(0)
-    finally:
-        return result
+    return result
