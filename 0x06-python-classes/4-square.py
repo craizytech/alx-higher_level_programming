@@ -17,6 +17,7 @@ class Square:
                 self.__size = size
         else:
             raise TypeError("size must be an integer")
+
     @property
     def size(self):
         """int: returns the size of the square"""
