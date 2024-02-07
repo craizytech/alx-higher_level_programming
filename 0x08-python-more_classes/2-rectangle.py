@@ -85,9 +85,6 @@ class Rectangle:
         """This is a public instance method.
 
         Args:
-            returns the area of the rectangle
+            returns the perimeter of the rectangle
         """
-        if width == 0 or height == 0:
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
+        return 2 * (self.__width + self.__height)
