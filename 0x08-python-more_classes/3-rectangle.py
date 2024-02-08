@@ -87,6 +87,7 @@ class Rectangle:
         Args:
             returns the perimeter of the rectangle
         """
+
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
@@ -95,6 +96,7 @@ class Rectangle:
         """This method returns a string representation of the rectangle.
         
         Returns (str): The rectangle representation of the object with #"""
+
         if self.__height == 0 or self.__width == 0:
             return ""
         else:
