@@ -107,3 +107,4 @@ class Rectangle:
 
         Returns (str): The official object representation"""
         return f'Rectangle({self.__width}, {self.__height})'
+
