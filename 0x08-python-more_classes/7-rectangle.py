@@ -109,7 +109,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         return '\n'.join([
-            Rectangle.print_symbol * self.__width
+            str(self.print_symbol) * self.__width
             for i in range(self.__height)
             ])
 
