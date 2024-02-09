@@ -9,8 +9,9 @@ class Square:
 
         Args:
             size (int): defines the size of the square
-            position (int): defines the position 
+            position (int): defines the position
         """
+
         if isinstance(size, int):
             if size < 0:
                 raise ValueError("size must be >= 0")
@@ -30,6 +31,7 @@ class Square:
                 raise TypeError(e)
         else:
             raise TypeError(e)
+
     @property
     def position(self):
         """int: returns the position."""
@@ -74,20 +76,11 @@ class Square:
 
     def my_print(self):
         """Prints to the stdout the square with the character #."""
-        """if self.__size == 0:
+        if self.__size == 0:
             print()
         else:
             for i in range(self.__position[1]):
                 print("")
             for j in range(self.__size):
                 print(" " * self.__position[0], end="")
-                print("#" * self.__size)"""
-        if self.__size == 0:
-            print("")
-            return
-
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            print("")
+                print("#" * self.__size)
