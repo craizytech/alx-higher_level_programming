@@ -1,0 +1,19 @@
+The tests below tests the function add_integert() to ensure it behaves
+correctly given a range of inputs.
+
+NUMBERS:
+The add_integer function takes in two arguments with one optional argument
+and returns the sum
+>>> from 0-add_integer.py import add_integer
+>>> add_integer(3, 2)
+5
+>>>add_integer(2)
+100
+
+FLOATS:
+It also takes in floats and perfoms the sum on the two operands and returns
+the sum
+>>> add_integer(3.3, 2.4)
+5.7
+>>> add_integer(4.4)
+102.4
