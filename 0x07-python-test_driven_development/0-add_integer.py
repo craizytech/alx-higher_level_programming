@@ -12,4 +12,10 @@ def add_integer(a, b=98):
     Returns:
         int or float: the sum of the two arguments
     """
-    return a + b
+    if type(a) in [int, float]:
+        if type(b) in [int, float]:
+            return a + b
+        else:
+            raise TypeError("b must be an integer")
+    else:
+        raise TypeError("a must be an integer")

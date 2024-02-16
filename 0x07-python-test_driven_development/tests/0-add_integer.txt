@@ -1,19 +1,40 @@
-The tests below tests the function add_integert() to ensure it behaves
-correctly given a range of inputs.
+===============================
+ How to Use 0-add_integer.py
+===============================
 
-NUMBERS:
-The add_integer function takes in two arguments with one optional argument
-and returns the sum
->>> from 0-add_integer.py import add_integer
->>> add_integer(3, 2)
-5
->>>add_integer(2)
-100
+This library is very simple, since it only has one function called
+``add_integer(a, b=98)``.
 
-FLOATS:
-It also takes in floats and perfoms the sum on the two operands and returns
-the sum
->>> add_integer(3.3, 2.4)
-5.7
->>> add_integer(4.4)
-102.4
+Numbers
+=======
+
+add_integer() returns the result of the addition of the two integers
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(3, 2)
+    5
+
+It also works with floating-point values.
+
+::
+
+    >>> add_integer(2.0, 3)
+    5.0
+
+Non-Numbers
+===========
+
+The `+` operator does not work for objects wich are not floats or ints
+hence it should raise a typerror for non-numbers.
+
+::
+
+    >>> add_integer('a', 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(3, 'b')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
