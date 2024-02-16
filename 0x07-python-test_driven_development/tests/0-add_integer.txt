@@ -24,7 +24,7 @@ to ints before the addition is performed.
     >>> add_integer(2.0, 3.3)
     5
     >>> add_integer(-2.5, -3.6)
-    -6
+    -5
 
 Floating and non-floats can be combined
 
@@ -60,9 +60,10 @@ hence it should raise a typerror for non-numbers.
 
     >>> add_integer(None)
     Traceback: (most recent call last):
+        ...
     TypeError: a must be an integer
 
-    >>> add_integer(1.2, None):
+    >>> add_integer(1.2, None)
     Traceback: (most recent call last):
     TypeError: b must be an integer
 
