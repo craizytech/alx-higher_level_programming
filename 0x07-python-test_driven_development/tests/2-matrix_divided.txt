@@ -29,6 +29,11 @@ The method works for a matrix containing a mixture of floats and ints
     >>> matrix_divided([[2, 4.4, 6.6], [8.8, 10, 12]], 2)
     [[1.0, 2.2, 3.3], [4.4, 5.0, 6.0]]
 
+The method works when div is negative
+::
+    >>> matrix_divided([[3, 9], [12, 15]], -3)
+    [[-1.0, -3.0], [-4.0, -5.0]]
+
 The method raises an exception for a 1D matrix since the instruction states
 that the matrix must be a list of lists
 ::
@@ -92,3 +97,4 @@ The function fails when None is passed to it.
     >>> matrix_divided([[1,2,3], [4, 5, 6]], None)
     Traceback (most recent call last):
     TypeError: div must be a number
+
