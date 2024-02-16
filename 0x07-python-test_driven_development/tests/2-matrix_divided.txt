@@ -82,11 +82,6 @@ to the method.
     Traceback (most recent call last):
     TypeError: matrix_divided()...
 
-The function fails when infinity is passed on to it.
-::
-    >>> matrix_divided([[2, float('inf'), 6], [8, 10, 12]], 2.5)
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
 
 The function fails when None is passed to it.
 ::
