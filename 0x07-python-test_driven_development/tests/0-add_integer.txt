@@ -38,3 +38,17 @@ hence it should raise a typerror for non-numbers.
     >>> add_integer(3, 'b')
     Traceback (most recent call last):
     TypeError: b must be an integer
+
+
+Missing-Arguments
+=================
+
+The method add_integer(a, b=98) should be called with 2 arguments one 
+positional argument a must be provided while the b is optional since 
+it is set to 98 if it is Missing.
+
+::
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
