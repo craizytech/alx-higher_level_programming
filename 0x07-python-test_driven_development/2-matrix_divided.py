@@ -20,24 +20,21 @@ def matrix_divided(matrix, div):
 
     if isinstance(matrix, list):
         check_list(matrix)
-        o_list = []
+        new_matrix = []
         for i in matrix:
             if isinstance(i, list):
-                s_list = []
+                new_row = []
                 for j in i:
                     if type(j) in [float, int]:
-                            result = (j / div) * 100
-                            result = int(result + 0.5)
-                            result = result / 100
-                            s_list.append(result)
+                            new_row.append(round(j / div, 1))
                     else:
                          raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-                o_list.append(s_list)
+                new_matrix.append(new_row)
             else:
                  raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     else:
          raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    return o_list
+    return new_matrix
 
 
 def check_list(l):
