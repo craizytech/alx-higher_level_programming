@@ -93,7 +93,7 @@ The function returns a valueerror for NaN numbers
     ValueError: cannot convert float NaN to integer
 
     >>> add_integer(4, float('nan'))
-    TypeError (most recent call last):
+    Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 
 
