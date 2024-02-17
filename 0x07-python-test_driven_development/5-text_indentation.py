@@ -15,7 +15,7 @@ def text_indentation(text):
         sentence = ""
         for char in text:
             if char in ['.', '?', ':']:
-                sentences.append(sentence + char)
+                sentences.append(sentence + char + '\n\n')
                 sentence = ""
             else:
                 sentence += char
@@ -24,7 +24,6 @@ def text_indentation(text):
             sentences.append(sentence)
 
         for sentence in sentences:
-            print(sentence)
-            print()
+            print(sentence, end="")
     else:
         raise TypeError("text must be a string")
