@@ -14,7 +14,7 @@ def text_indentation(text):
         new_string = ""
         for i in text:
             if i in ['.', '?', ':']:
-                new_string += "\n\n"
+                new_string += i + "\n\n"
             else:
                 new_string += i
         new_string = new_string.strip()
