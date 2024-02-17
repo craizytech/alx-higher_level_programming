@@ -11,10 +11,20 @@ def text_indentation(text):
 
     if isinstance(text, str):
         text = text.strip()
-        for i in text:
-            if i in ['.', '?', ':']:
-                print(f"{i}\n\n", end="")
+        sentences = []
+        sentence = ""
+        for char in text:
+            if char in ['.', '?', ':']:
+                sentences.append(sentence + char)
+                sentence = ""
             else:
-                print(i, end="")
+                sentence += char
+
+        if sentence:
+            sentences.append(sentence)
+
+        for sentence in sentences:
+            print(sentence)
+            print()
     else:
         raise TypeError("text must be a string")
