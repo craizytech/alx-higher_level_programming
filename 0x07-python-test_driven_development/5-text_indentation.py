@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """This module defines a function that indents a string"""
 
+
 def text_indentation(text):
     """This function takes in a string and indents it based
     on the characters '., ?, :' by adding two lines after each
     of the characters
-    
+
     Args:
         text (str): The string to be indented"""
 
