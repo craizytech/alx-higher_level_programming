@@ -60,8 +60,8 @@ the function only recieves one positional parameter that is an integer
     Traceback (most recent call last):
     TypeError: print_square()...
 
-    >>> print_square()
-    Traceback (most recent call last): #doctest: +ELLIPSIS
+    >>> print_square() #doctest: +ELLIPSIS
+    Traceback (most recent call last):
     TypeError: print_square()...
 
 The function raises an error when None, infinity, nan are passed to It
