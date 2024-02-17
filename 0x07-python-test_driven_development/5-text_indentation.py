@@ -1,30 +1,31 @@
 #!/usr/bin/python3
-"""This module defines a function that indents a string"""
+# 5-text_indentation.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a text-indentation function."""
+
 
 def text_indentation(text):
-    """This function takes in a string and indents it based
-    on the characters '., ?, :' by adding two lines after each
-    of the characters
-    
+    """Print text with two new lines after each '.', '?', and ':'.
+
     Args:
-        text (str): The string to be indented"""
-
-    if isinstance(text, str):
-        text = text.strip()
-        sentences = []
-        sentence = ""
-        for char in text:
-            if char in ['.', '?', ':']:
-                sentence += char
-                sentences.append(sentence + '\n\n')
-                sentence = ""
-            else:
-                sentence += char
-
-        if sentence:
-            sentences.append(sentence)
-
-        indented_text = "".join(sentences)
-        print(indented_text, end="")
-    else:
+        text (string): The text to print.
+    Raises:
+        TypeError: If text is not a string.
+    """
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
+
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
+
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1
