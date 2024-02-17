@@ -14,17 +14,17 @@ def text_indentation(text):
         sentences = []
         sentence = ""
         for char in text:
-            if char in ['.', '?', ':']:
-                sentence += char
-                sentences.append(sentence + '\n\n')
+            if char in ".?:":
+                sentences.append(sentence + char)
                 sentence = ""
             else:
                 sentence += char
-
+        
         if sentence:
             sentences.append(sentence)
-
-        indented_text = "".join(sentences)
-        print(indented_text, end="")
+        
+        for sentence in sentences:
+            print(sentence.strip())
+            print()
     else:
         raise TypeError("text must be a string")
