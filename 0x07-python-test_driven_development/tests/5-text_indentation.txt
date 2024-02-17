@@ -31,7 +31,7 @@ When a string with the '.' character is passed, while printing it out it
 replaces it with 2 new lines
 ::
     >>> text_indentation("Eammon.Kiprotich")
-    Eammon
+    Eammon.
     <BLANKLINE>
     Kiprotich
 
@@ -39,7 +39,7 @@ When a string with the '?' character is passed, while printing it out it
 replaces it with 2 new lines
 ::
     >>> text_indentation("Eammon?Kiprotich")
-    Eammon
+    Eammon?
     <BLANKLINE>
     Kiprotich
 
@@ -47,7 +47,7 @@ When a string with the ':' character is passed, while printing it out it
 replaces it with 2 new lines
 ::
     >>> text_indentation("Eammon:Kiprotich")
-    Eammon
+    Eammon:
     <BLANKLINE>
     Kiprotich
 
@@ -55,11 +55,11 @@ When a string with the characters '.', '?', ':' is passed, while printing
 it out it replaces each of it with 2 new lines
 ::
     >>> text_indentation("Eammon:Kiprotich.Mutai?Those are my three names")
-    Eammon
+    Eammon:
     <BLANKLINE>
-    Kiprotich
+    Kiprotich.
     <BLANKLINE>
-    Mutai
+    Mutai?
     <BLANKLINE>
     Those are my three names
 
@@ -93,7 +93,6 @@ When incorrect number of arguments is passed to the function it raises an error
 The function handles a situation where the character is at the end of the line
 ::
     >>> text_indentation("Eammon:Kiprotich.")
-    Eammon
+    Eammon:
     <BLANKLINE>
-    Kiprotich
-    <BLANKLINE>
+    Kiprotich.

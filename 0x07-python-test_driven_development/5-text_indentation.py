@@ -10,13 +10,20 @@ def text_indentation(text):
         text (str): The string to be indented"""
 
     if isinstance(text, str):
-        text = text.strip()
-        new_string = ""
+        sentences = []
+        sentence = ""
         for char in text:
-            if char in ".?:":
-                new_string += char + '\n\n'
+            if char in ['.', '?', ':']:
+                sentence += char
+                sentences.append(sentence.strip())
+                sentence = ""
             else:
-                new_string += char
-        print(new_string, end="")
+                sentence += char
+
+        if sentence:
+            sentences.append(sentence.strip())
+
+        indented_text = "\n\n".join(sentences)
+        print(indented_text, end="")
     else:
         raise TypeError("text must be a string")
