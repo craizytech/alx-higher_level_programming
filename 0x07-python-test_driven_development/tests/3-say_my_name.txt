@@ -1,0 +1,59 @@
+#3-say_my_name.txt
+
+==============================
+How to use 3-say_my_name.py
+==============================
+
+Defines a function that prints ```My name is <first name> <last name>```
+
+Usage
+=====
+
+The function: def say_my_name(first_name, last_name=""). It takes in two
+positional arguments one must be provided while the other has a default
+
+The function prints the fist_name and last_name
+
+TESTS
+=====
+
+The function prints the correct output for 2 string arguments
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Eammon", "Kiprotich")
+    My name is Eammon Kiprotich
+
+The function prints the correct output when one argument is provided
+::
+    >>> say_my_name("Eammon") #doctest: +NORMALIZE_WHITESPACE
+    My name is Eammon
+
+The function raises an error when no arguments are passed
+::
+    >>> say_my_name() #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: say_my_name()...
+
+The function raises a TypeError when a type other than string is provided
+::
+    When a wrong type is passed as the first argument
+
+    >>> say_my_name(2, "goat")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    When a wrong type is passed as the 2nd argument
+
+    >>> say_my_name("Eammon", 1)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    When a wrong type is passed for both, The function raises an exception
+    for the first argument only
+
+    >>> say_my_name(1, 2)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+
+
