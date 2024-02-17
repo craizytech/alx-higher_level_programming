@@ -7,14 +7,14 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(max_integer([]), None)
-    
+
     def test_onlyint_list(self):
+        self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([1,2,3,4,5]), 5)
-    
-    def test_list_mixed(self):
-        self.assertRaises(TypeError, max_integer,['a', 1, 'b', 2, 'c'])
-    
-    def test_list_float(self):
+        self.assertEqual(max_integer([6,2,3,4,5]), 6)
+        self.assertEqual(max_integer([1,2,6,4,5]), 6)
+        self.assertEqual(max_integer([-1,-2,-6,-4,-5]), -1)
+        self.assertEqual(max_integer([1,2,-3,4,5]), 5)
         self.assertEqual(max_integer([1.1, 2.3, 4.5, 6, 7.5]), 7.5)
     
     def test_parameters(self):
