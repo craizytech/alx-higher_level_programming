@@ -5,10 +5,10 @@
 def print_square(size):
     """This method takes in a positive integer size
     Then prints the square representation using # char
-    
+
     Args:
         size (int): positive integer"""
-    
+
     if isinstance(size, int):
         if size >= 0:
             for i in range(size):
