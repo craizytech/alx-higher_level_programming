@@ -11,4 +11,6 @@ class MyList(list):
 
     def print_sorted(self):
         """This method returns a sorted list"""
-        return self.my_list.sort()
+        self.my_list = self.my_list.sort()
+        print(self.my_list)
+        return self.my_list
