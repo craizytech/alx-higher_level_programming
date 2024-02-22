@@ -15,3 +15,4 @@ class MyList(list):
         """This method returns a sorted list"""
         sorted_list = sorted(self)
         print(sorted_list)
+        return sorted_list
