@@ -57,6 +57,5 @@ original
     >>> my_list = MyList([1, 4, 3, 2])
     >>> my_list.print_sorted()
     [1, 2, 3, 4]
-    [1, 2, 3, 4]
     >>> my_list
     [1, 4, 3, 2]
