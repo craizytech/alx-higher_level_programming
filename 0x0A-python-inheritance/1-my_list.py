@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""This module defines a class that inherits from list class"""
+"""This module defines a class that inherits from list."""
 
 
 class MyList(list):
-    """This class is a subclass of List"""
+    """This is a subclass of the list class."""
 
     def __init__(self, my_list=None):
-        """This is the constructor method for the class"""
+        """The constructor method of this class."""
         if my_list is None:
-            my_list = []
-        super().__init__(my_list)
+            self.my_list = []
+        else:
+            self.my_list = my_list
+        super().__init__(self.my_list)
 
     def print_sorted(self):
-        """This method returns a sorted list"""
-        sorted_list = sorted(self)
+        """This method prints the list sorted."""
+        sorted_list = sorted(self.my_list)
         print(sorted_list)
         return sorted_list
