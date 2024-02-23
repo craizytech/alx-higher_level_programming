@@ -31,6 +31,9 @@ When we can create an instance of the class with a list as argument
     >>> my_list = MyList([1, 2, 3, 4])
     >>> my_list
     [1, 2, 3, 4]
+    >>> my_list = MyList([1, -2, 3, -4])
+    >>> my_list
+    [1, -2, 3, -4]
 
 when an instance of the class is created we can append a value into a list
 since append is a method in the superclass it is inherited by MyList.
@@ -39,9 +42,9 @@ since append is a method in the superclass it is inherited by MyList.
     >>> my_list
     []
     >>> my_list.append(5)
-    >>> my_list.append(6)
+    >>> my_list.append(-6)
     >>> my_list
-    [5, 6]
+    [5, -6]
 
 With inheritance the child class inherits from the parent class, MyList class
 also inherits the __str__ method from the list class
