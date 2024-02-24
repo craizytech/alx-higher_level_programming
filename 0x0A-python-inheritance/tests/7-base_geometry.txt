@@ -23,9 +23,8 @@ We can create an instance of the class
 
 When we try to make use of the area method in the class it raises an exception
 ::
-    >>> bg.area() #doctest: +ELLIPSIS
+    >>> bg.area()
     Traceback (most recent call last):
-    ...
     Exception: area() is not implemented
 
 The integer_validator method requires 2 positional arguments the first is name
@@ -51,7 +50,6 @@ when an incorrect number of positional arguments is passed, it raises a TypeErro
     TypeError: integer_validator()...
 
 ::
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("One", 21, 22) #doctest: +ELLIPSIS
     Traceback (most recent call last):
     TypeError: integer_validator()...
