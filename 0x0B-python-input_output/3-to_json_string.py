@@ -14,4 +14,4 @@ def to_json_string(string):
         json (object)
     """
 
-    return json.dumpss(string)
+    return json.dumps(string)
