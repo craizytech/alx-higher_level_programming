@@ -2,7 +2,7 @@
 """This module reads a file."""
 
 
-def read_line(filename=""):
+def read_file(filename=""):
     """This method reads a text file and displays the output.
 
     Args:
