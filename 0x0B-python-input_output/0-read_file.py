@@ -13,4 +13,5 @@ def read_line(filename=""):
     """
 
     with open(filename, mode='r', encoding="utf-8") as text_file:
+        """with creates a runtime context used to openand close the file."""
         print(text_file.read())
