@@ -7,11 +7,11 @@ def read_file(filename=""):
 
     Args:
         filename (string): the name of the file to be printed
-    
+
     Returns:
         the contents of the file
     """
 
     with open(filename, encoding="utf-8") as text_file:
         """with creates a runtime context used to openand close the file."""
-        print(text_file.read(), end = "")
+        print(text_file.read(), end="")
