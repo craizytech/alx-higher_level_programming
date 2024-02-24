@@ -12,4 +12,4 @@ def inherits_from(obj, a_class):
     Returns:
         boolean
     """
-    return issubclass(obj, a_class)
+    return isinstance(obj, a_class)
