@@ -1,0 +1,62 @@
+#7-base_geometry.txt
+
+=============================
+How to use 7-base_geometry.py
+=============================
+
+This module defines a geometry class
+
+Usage
+=====
+
+The class contains two methods area() and an integer validatorinteger_validator methods
+
+Tests
+=====
+
+We can create an instance of the class
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
+When we try to make use of the area method in the class it raises an exception
+::
+    >>> bg = BaseGeometry()
+    >>> bg.area() #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+The integer_validator method requires 2 positional arguments the first is name
+which should always be a string and value wich should always be an positive integer
+and always > 0
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Eammon", 21)
+
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Eammon", -1)
+    Traceback (most recent call last):
+    ValueError: <name> must be greater than 0
+
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Eammon", [1, 2])
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+
+when an incorrect number of positional arguments is passed, it raises a TypeError
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Eammon") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator()...
+
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Eammon", 21, 22) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator()...
