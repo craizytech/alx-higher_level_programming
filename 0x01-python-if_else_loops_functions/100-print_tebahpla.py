@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 flag = True
-for i in range(122, 96 ,-1):
+for i in range(122, 96, -1):
     if flag:
         flag = False
     else:
