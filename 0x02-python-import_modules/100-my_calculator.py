@@ -5,6 +5,7 @@ if __name__ == "__main__":
     arg_list = sys.argv
     arg_count = len(arg_list)
 
+    print("Number of args:", arg_count)
     if arg_count != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
