@@ -14,5 +14,5 @@ if __name__ == "__main__":
         exit(1)
 
     print(f"{arg_count} arguments:")
-    for i in range(1, arg_count):
+    for i in range(1, arg_count+1):
         print(f"{i}: {arg_list[i]}")
