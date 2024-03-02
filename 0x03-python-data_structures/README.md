@@ -1,1 +1,1 @@
-This is the repo containing all tasks done under the python data structured project
+This folder contains solutions for tasks under the data structures project
