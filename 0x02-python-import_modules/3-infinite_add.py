@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     for i in range(1, arg_count):
         sum += int(arg_list[i])
-    
+
     print(sum)
