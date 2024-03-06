@@ -1,1 +1,1 @@
-This folder contains tasks done under the project python exceptions
+This readme file contains solutions to the tasks under python exceptions

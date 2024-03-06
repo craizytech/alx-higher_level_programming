@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+
 def safe_print_list(my_list=[], x=0):
-    """This func prints x elements of a list."""
-    count = 0
-    try:
-        for i in range(x):
-            print(my_list[i], end="")
-            count += 1
-    except IndexError:
-        pass
+    printed_elements = 0
+        try:
+            for i in range(x):
+                print(my_list[i], end="")
+                printed_elements += 1
+        except IndexError:
+            pass
     print()
-    return count
+    return printed_elements
+

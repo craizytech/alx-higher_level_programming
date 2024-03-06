@@ -1,12 +1,9 @@
 #!/usr/bin/python3
+
 def safe_print_integer(value):
-    """Prints an integer."""
+    """This function prints an int .format."""
     try:
-        new_value = value / 0
-    except ZeroDivisionError:
-        if value != int(value):
-            return False
         print("{:d}".format(value))
         return True
-    except TypeError:
+    except ValueError:
         return False
