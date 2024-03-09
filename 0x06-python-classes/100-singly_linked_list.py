@@ -9,7 +9,7 @@ class Node:
         else:
             raise TypeError("data must be an integer")
 
-        if isinstance(next_node, (Node, None)):
+        if isinstance(next_node, Node) or next_node is None:
             self.__next_node = next_node
         else:
             raise TypeError("next_node must be a Node object")
@@ -34,8 +34,8 @@ class Node:
         @next_node.setter
         def next_node(self, value):
             """This method is a setter method for the next_node."""
-            if isinstance(next_node, (Node, None)):
-                self.__next_node = next_node
+            if isinstance(next_node, Node) or next_node is None:
+                self.__next_node = value
             else:
                 raise TypeError("next_node must be a Node object")
 
@@ -53,9 +53,9 @@ class SinglyLinkedList:
             self.head = new_node
             return
         current = self.head
-        while current.next:
-            current = current.next
-        current.next = new_node
+        while current.__next_node:
+            current = current.__next_node
+        current.__next_node = new_node
     def __str__(self):
         """This method prints a string representation of the node."""
         pass
