@@ -34,7 +34,7 @@ class Square:
         """This is a setter method for the postion private attribute."""
         if isinstance(pos[0], int) and\
                 isinstance(pos[1], int):
-                    if pos[0] and pos[1] >= 0:
+                    if pos[0] >= 0 and pos[1] >= 0:
                         self.__position = pos
                     else:
                         raise TypeError("position must\
@@ -66,9 +66,8 @@ class Square:
         if self.__size == 0:
             print("")
             return
-
-        [print("") for i in range(self.__position[1])]
+        for i in range(self.__position[1]):
+            print()
         for i in range(self.__size):
-            [print(" ", end="") for j in range(self.__position[0])]
-            [print("#", end="") for k in range(self.__size)]
-            print("")
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
