@@ -40,4 +40,4 @@ class Rectangle:
 
     def perimeter(self):
         """This method returns the perimeter of the rectangle."""
-        return 2 * (self.__height + self.__weight)
+        return 2 * (self.__height + self.__width)
