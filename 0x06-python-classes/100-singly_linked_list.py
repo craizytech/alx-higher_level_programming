@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module contains the implementation of a singly linked list."""
 
 class Node:
     """This class defines a structure of a node."""
