@@ -47,7 +47,7 @@ class Rectangle:
     def __str__(self):
         """This method prints an informal representation on the object."""
         if self.__width == 0 or self.__height == 0:
-            return 0
+            return ""
 
         result = ""
         for row in range(self.__height):
