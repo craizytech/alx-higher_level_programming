@@ -1,7 +1,8 @@
 -- This script lists all the cities of carlifornia that can be found in the db
 -- hbtn_0d_usa
 
-USE `hbtn_0d_usa`
-SELECT *
+USE `hbtn_0d_usa`;
+SELECT cities.id, cities.name
 FROM cities
-ORDER BY id
+WHERE states.name = 'Carlifornia'
+ORDER BY cities.id;
