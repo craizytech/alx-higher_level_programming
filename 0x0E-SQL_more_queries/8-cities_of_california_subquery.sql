@@ -3,6 +3,6 @@
 
 USE `hbtn_0d_usa`;
 SELECT cities.id, cities.name
-FROM cities
-WHERE states.name = 'Carlifornia'
+FROM cities, states
+WHERE states.name = 'California'
 ORDER BY cities.id;
