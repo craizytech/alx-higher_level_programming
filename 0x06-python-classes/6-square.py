@@ -45,10 +45,10 @@ class Square:
             print()
 
         print('\n' * self.__position[1], end="")
-        row = ' ' * self.__position[0] + '#' * self.__size
+        if self.__position[1] == 0:
+            row = ' ' * self.__position[0] + '#' * self.__size
+        else:
+            row = '#' * self.__size
+
         for i in range(self.__size):
-        #   if i != self.__size:
-        #        print(row)
-        #    else:
-        #        print(row, end="")
             print(row)
