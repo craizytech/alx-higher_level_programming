@@ -42,9 +42,10 @@ class SinglyLinkedList:
         """This method prints an informal representation of list."""
         current = self.__head
         string = ""
-        while current:
+        while current and current.next_node:
             string += str(current.data) + '\n'
             current = current.next_node
+        string += str(current.data)
         return string
 
     def sorted_insert(self, value):
