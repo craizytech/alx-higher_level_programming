@@ -43,6 +43,7 @@ class Square:
         """This function prints a representation of the square using #."""
         if self.__size == 0:
             print()
+            return
 
         if self.__position[1] == 0:
             space = ' ' * self.__position[0]
