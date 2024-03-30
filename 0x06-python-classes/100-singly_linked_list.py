@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This module contains 2 classes that implements a singly linked list."""
 
-import pdb
 
 class Node:
     """This class implements a node structure."""
