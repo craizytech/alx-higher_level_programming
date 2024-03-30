@@ -42,15 +42,13 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """This function prints a representation of the square using #."""
+        """Print the square with the # character."""
         if self.__size == 0:
-            print()
+            print("")
             return
 
-        for _ in range(self.__position[1]):
-            print()
-
-        space = ' ' * self.__position[0]
-
-        for _ in range(self.__size):
-            print(space + "#" * self.__size)
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print("")
