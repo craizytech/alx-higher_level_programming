@@ -45,13 +45,10 @@ class Square:
             print()
             return
 
-        if self.__position[1] == 0:
-            space = ' ' * self.__position[0]
-        else:
-            space = ''
-
         for _ in range(self.__position[1]):
             print()
+
+        space = ' ' * self.__position[0]
 
         for _ in range(self.__size):
             print(space + "#" * self.__size)
