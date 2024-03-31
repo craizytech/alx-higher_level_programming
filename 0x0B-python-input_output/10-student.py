@@ -13,6 +13,6 @@ class Student:
     def to_json(self, attrs=None):
         """this method retrieves a dictionary rep of a student instance."""
         if isinstance(attrs, list):
-            return {attr: getattr(self, attr, None) for attr in attrs}
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         else:
             return self.__dict__
