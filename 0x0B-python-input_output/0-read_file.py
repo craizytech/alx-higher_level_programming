@@ -3,15 +3,11 @@
 
 
 def read_file(filename=""):
-    """This method reads a text file and displays the output.
+    """This method reads a file and prints output.
 
     Args:
-        filename (string): the name of the file to be printed
-
-    Returns:
-        the contents of the file
+        filename (str): this is the name of the file to be opened.
     """
-
-    with open(filename, encoding="utf-8") as text_file:
-        """with creates a runtime context used to openand close the file."""
-        print(text_file.read(), end="")
+    with open(filename, 'r', encoding='utf-8') as f:
+        """with creates a runtime context used for opening and closing files"""
+        print(f.read(), end="")

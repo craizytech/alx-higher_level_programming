@@ -1,18 +1,14 @@
 #!/usr/bin/python3
-"""This module creates a json object"""
-
-
+"""This module is used for serialization."""
 import json
 
 
-def to_json_string(string):
-    """This method returns the JSON Representation of an object
+def to_json_string(my_obj):
+    """This method converts a python object to a json string representation.
 
     Args:
-        string (str): string to be converted to json object
-
+        my_obj (object): This is a python object
     Returns:
-        json (object)
+        a json string representation of the my_object file
     """
-
-    return json.dumps(string)
+    return json.dumps(my_obj)

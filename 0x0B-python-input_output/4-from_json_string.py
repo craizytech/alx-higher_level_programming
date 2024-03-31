@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""This module desirializes a json object to a python object."""
-
-
+"""This is used to convert a python object to json."""
 import json
 
 
 def from_json_string(my_str):
-    """function that returns a JSON representation of an object.
+    """This method converts a json object to a python object.
 
     Args:
-        my_str (json object): the json representation of an object
-
+        my_str (json object): This is a json object string representation
     Returns:
-        Python object
+        a python object
     """
     return json.loads(my_str)

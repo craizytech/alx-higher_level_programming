@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""This module writes an Object to a text file using a JSON rep"""
-
-
+"""This module is for seriliazation."""
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """This method writes an Object to a textfile, using json.
+    """This method converts a py object to json and stores this in a file.
 
     Args:
-        my_obj (py object): python object
-        filename (str): the name of th file
+        my_obj (python object): This is a python object
+        filename: name of the file the json is written on
     """
-
-    with open(filename, mode='w', encoding="utf-8") as object_file:
-        json.dump(my_obj, object_file)
+    with open(filename, 'w', encoding="utf-8") as f:
+        json.dump(my_obj, filename)

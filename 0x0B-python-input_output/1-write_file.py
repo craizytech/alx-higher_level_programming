@@ -1,19 +1,16 @@
 #!/usr/bin/python3
-"""This module writes a string to a text file."""
+"""This module is used to open files and perfom some actions."""
 
 
 def write_file(filename="", text=""):
-    """This module writes a string to a text file.
+    """This method opens the file for writing.
 
     Args:
-        filename (string): The name of the file
-        text (string): the text string of arguments
-
+        filename (str): This is the name of the file to be opened
+        text (str): This is the text to be written to the file
     Returns:
-        The number of characters written
+        num (int): The number of characters written to the file
     """
-
-    with open(filename, mode='w', encoding="utf-8") as text_file:
-        num = text_file.write(text)
-
+    with open(filename, 'w', encoding="UTF-8") as f:
+        num = f.write(text)
     return num

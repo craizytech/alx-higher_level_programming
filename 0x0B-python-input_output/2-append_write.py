@@ -1,19 +1,16 @@
 #!/usr/bin/python3
-"""This module appends a file."""
+"""This module is used for file I/O."""
 
 
 def append_write(filename="", text=""):
-    """This function appends a string to the end of a text file.
+    """ This file appends a string to the end of the file.
 
     Args:
-        filename (string): the filename of the string
-        text (string): the string to append to the end of the file
-
+        filename (str): the name of the file name
+        text (str): the string to be appended to the end of the file
     Returns:
-        the number of characters appended to the file
+        the number of characters written
     """
-
-    with open(filename, mode='a', encoding="utf-8") as text_file:
-        num = text_file.write(text)
-
+    with open(filename, 'a', encoding="UTF-8") as f:
+        num = f.write(text)
     return num
