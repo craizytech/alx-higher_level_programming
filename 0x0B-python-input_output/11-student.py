@@ -22,5 +22,5 @@ class Student:
         Args:
             json (dict): dictionary containing the attributes of the instance
         """
-        for k,v in json.items():
+        for k, v in json.items():
             setattr(self, k, v)
