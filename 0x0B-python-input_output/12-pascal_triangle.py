@@ -11,6 +11,8 @@ def pascal_triangle(n):
         a list of lists containing the pascals integers
     """
     res = [[1]]
+    if n == 0:
+        return res
     for i in range(n-1):
         temp = [0] + res[-1] + [0]
         row = []
