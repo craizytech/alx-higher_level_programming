@@ -39,6 +39,11 @@ and always > 0
     ValueError: Negative One must be greater than 0
 
 ::
+    >>> bg.integer_validator("number", 0)
+    Traceback (most recent call last):
+    ValueError: number must be greater than 0
+
+::
     >>> bg.integer_validator("One", [1, 2]) 
     Traceback (most recent call last):
     TypeError: One must be an integer
@@ -71,6 +76,11 @@ When any another type other than an integer is passed it results into an TypeErr
     >>> bg.integer_validator("age", [1,2,3])
     Traceback (most recent call last):
     TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", "4")
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
 
 ::
 When a boolean is passed it results into a TypeError
