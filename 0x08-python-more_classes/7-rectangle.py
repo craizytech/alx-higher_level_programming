@@ -54,13 +54,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        result = []
+        rect = []
         for row in range(self.__height):
-            for num in range(self.__width):
-                result.append(Rectangle.print_symbol)
+            [rect.append(str(self.print_symbol)) for n in range(self.__width)]
             if row != self.__height - 1:
-                result.append('\n')
-        return "".join(result)
+                rect.append('\n')
+        return "".join(rect)
 
     def __repr__(self):
         """This method returns a formal representation of the object"""
