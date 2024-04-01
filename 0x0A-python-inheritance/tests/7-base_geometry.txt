@@ -81,6 +81,12 @@ When any another type other than an integer is passed it results into an TypeErr
     Traceback (most recent call last):
     TypeError: age must be an integer
 
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+
+
 
 ::
 When a boolean is passed it results into a TypeError
