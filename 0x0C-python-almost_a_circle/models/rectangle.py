@@ -93,10 +93,23 @@ class Rectangle(base.Base):
             self.id, self.__x, self.__y, self.__width, self.__height
         )
 
-    def update(self, *args):
-        """This method updates the Attributes of the rectangle class."""
-        self.id = args[0] if len(args) > 0 else self.id
-        self.width = args[1] if len(args) > 1 else self.width
-        self.height = args[2] if len(args) > 2 else self.height
-        self.x = args[3] if len(args) > 3 else self.x
-        self.y = args[4] if len(args) > 4 else self.y
+    def update(self, *args, **kwargs):
+        """This method updates the Attributes of the rectangle class.
+
+        Args:
+            args (tuple) : this tuple contains variable number of arguments
+            kwargs (dict): dict containing keyword arguments
+        """
+        if len(args) > 0:
+            self.id = args[0] if len(args) > 0 else self.id
+            self.width = args[1] if len(args) > 1 else self.width
+            self.height = args[2] if len(args) > 2 else self.height
+            self.x = args[3] if len(args) > 3 else self.x
+            self.y = args[4] if len(args) > 4 else self.y
+        else:
+            for k, v in kwargs.items():
+                self.id =  v if k == "id" else self.id
+                self.width = v if k == "width" else self.width
+                self.height = v if k == "height" else self.height
+                self.x = v if k == "x" else self.x
+                self.u = v if k == "y" else self.y
