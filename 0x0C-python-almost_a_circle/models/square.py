@@ -10,33 +10,20 @@ class Square(rectangle.Rectangle):
         """This is the costructor class."""
         super().__init__(size, size, x, y, id)
 
-    # width getter
+    # size getter
     @property
-    def width(self):
+    def size(self):
         """This is the width getter method"""
-        return self.size
+        return self.width
     
     # width setter method
-    def width(self, size):
+    def size(self, size):
         """This is the with setter method"""
         if type(size) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("size must be an integer")
         if size <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("size must be > 0")
         self.width = size
-    
-    # height getter method
-    def height(self):
-        """This is the height getter method"""
-        return self.size
-    
-    # height setter method
-    def height(self, size):
-        """This is the height setter method"""
-        if type(size) is not int:
-            raise TypeError("height must be an integer")
-        if size <= 0:
-            raise ValueError("height must be > 0")
         self.height = size
 
     def __str__(self):
@@ -44,3 +31,22 @@ class Square(rectangle.Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width
         )
+
+    def update(self, *args, **kwargs):
+        """This method updates the Attributes of the rectangle class.
+
+        Args:
+            args (tuple) : this tuple contains variable number of arguments
+            kwargs (dict): dict containing keyword arguments
+        """
+        if len(args) > 0:
+            self.id = args[0] if len(args) > 0 else self.id
+            self.size = args[1] if len(args) > 1 else self.size
+            self.x = args[3] if len(args) > 3 else self.x
+            self.y = args[4] if len(args) > 4 else self.y
+        else:
+            for k, v in kwargs.items():
+                self.id = v if k == "id" else self.id
+                self.size = v if k == "size" else self.size
+                self.x = v if k == "x" else self.x
+                self.y = v if k == "y" else self.y
