@@ -2,6 +2,7 @@
 """This is the Square module."""
 from . import rectangle
 
+
 class Square(rectangle.Rectangle):
     """This is the Square class."""
 
