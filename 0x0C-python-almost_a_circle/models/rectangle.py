@@ -112,4 +112,4 @@ class Rectangle(base.Base):
                 self.width = v if k == "width" else self.width
                 self.height = v if k == "height" else self.height
                 self.x = v if k == "x" else self.x
-                self.u = v if k == "y" else self.y
+                self.y = v if k == "y" else self.y
