@@ -23,6 +23,10 @@ class Rectangle(base.Base):
     @width.setter
     def width(self, value):
         """This is the width setter method."""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     # Height decorators
@@ -34,6 +38,10 @@ class Rectangle(base.Base):
     @height.setter
     def height(self, value):
         """This is the height setter method."""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     # X value decorators
@@ -45,6 +53,10 @@ class Rectangle(base.Base):
     @x.setter
     def x(self, value):
         """This is the x setter method."""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     # Y value Decorators
@@ -55,4 +67,9 @@ class Rectangle(base.Base):
 
     @y.setter
     def y(self, value):
+        """This is the y setter method"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
