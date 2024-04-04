@@ -108,7 +108,7 @@ class Rectangle(base.Base):
             self.y = args[4] if len(args) > 4 else self.y
         else:
             for k, v in kwargs.items():
-                self.id =  v if k == "id" else self.id
+                self.id = v if k == "id" else self.id
                 self.width = v if k == "width" else self.width
                 self.height = v if k == "height" else self.height
                 self.x = v if k == "x" else self.x
