@@ -17,14 +17,15 @@ class Square(rectangle.Rectangle):
         return self.width
     
     # width setter method
-    def size(self, size):
+    @size.setter
+    def size(self, value):
         """This is the with setter method"""
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size <= 0:
             raise ValueError("size must be > 0")
-        self.width = size
-        self.height = size
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """This is method prints the object representation."""
