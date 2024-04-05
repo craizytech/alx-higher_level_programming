@@ -58,3 +58,15 @@ class Base:
                 dict_list = [obj.to_dictionary() for obj in list_objs]
             json_string = Base.to_json_string(dict_list)
             jsonfile.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """This method creates an instance of the class with all the attributes
+        already set.
+
+        Args:
+            dictionary (object): This is a variable number of kw args.
+        """
+        new_object = cls(1, 1)
+        new_object.update(**dictionary)
+        return new_object
