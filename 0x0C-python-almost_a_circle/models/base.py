@@ -65,7 +65,7 @@ class Base:
         """This method loads a python object from a file."""
         filename = cls.__name__ + ".json"
         list_objects = []
-        
+
         if not os.path.isfile(filename):
             return list_objects
 
