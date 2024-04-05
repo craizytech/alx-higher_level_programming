@@ -67,6 +67,9 @@ class Base:
         Args:
             dictionary (object): This is a variable number of kw args.
         """
-        new_object = cls(1, 1)
+        if cls.__name__ == "Rectangle"
+            new_object = cls(1, 1)
+        else:
+            new_object = cls(1)
         new_object.update(**dictionary)
         return new_object
