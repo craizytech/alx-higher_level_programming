@@ -70,7 +70,7 @@ class Base:
             return list_objects
 
         with open(filename, "r", encoding="utf-8") as jsonfile:
-            list_objects = json.load(jsonfile)
+            list_objects = Base.from_json_string(jsonfile.read())
 
         return [cls.create(**kwargs) for kwargs in list_objects]
 
