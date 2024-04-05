@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is the Base module."""
 import json
+import os.path
 
 
 class Base:
@@ -58,6 +59,20 @@ class Base:
                 dict_list = [obj.to_dictionary() for obj in list_objs]
             json_string = Base.to_json_string(dict_list)
             jsonfile.write(json_string)
+
+    @classmethod
+    def load_from_file(cls):
+        """This method loads a python object from a file."""
+        filename = cls.__name__ + ".json"
+        list_objects = []
+        
+        if not os.path.isfile(filename):
+            return list_objects
+
+        with open(filename, "r", encoding="utf-8") as jsonfile:
+            list_objects = json.load(jsonfile)
+
+        return [cls.create(**kwargs) for kwargs in list_objects]
 
     @classmethod
     def create(cls, **dictionary):
