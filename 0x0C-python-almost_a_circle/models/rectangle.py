@@ -113,3 +113,13 @@ class Rectangle(base.Base):
                 self.height = v if k == "height" else self.height
                 self.x = v if k == "x" else self.x
                 self.y = v if k == "y" else self.y
+    
+    def to_dictionary(self):
+        """method returns the dictionary representation of a Rectangle"""
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
