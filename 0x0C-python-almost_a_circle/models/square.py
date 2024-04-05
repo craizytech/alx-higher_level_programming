@@ -20,9 +20,9 @@ class Square(rectangle.Rectangle):
     @size.setter
     def size(self, value):
         """This is the with setter method"""
-        if type(size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size <= 0:
+        if value <= 0:
             raise ValueError("size must be > 0")
         self.width = value
         self.height = value
