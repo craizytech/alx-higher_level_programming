@@ -2,12 +2,10 @@
 const arg1 = Number(process.argv[2]);
 const arg2 = Number(process.argv[3]);
 
-exports.add = function add (a, b) {
+exports.add = function (a, b) {
   if (!isNaN(a) && !isNaN(b)) {
-    const result = a + b;
-    console.log(result);
+    return a + b;
   } else {
-    console.log('NaN');
+    return NaN;
   }
-}
-add(arg1, arg2);
+};
