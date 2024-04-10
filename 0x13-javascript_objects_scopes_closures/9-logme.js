@@ -4,7 +4,7 @@ exports.logMe = function (item) {
     exports.logMe.counter = 0;
   }
 
-  console.log(exports.logMe.counter + ':' + item);
+  console.log(exports.logMe.counter + ': ' + item);
 
   exports.logMe.counter++;
 };
