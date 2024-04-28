@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
     # fetch all the states from the database
     query = """SELECT id, name FROM states
-            WHERE name LIKE BINARY '{}'
-            ORDER BY states.id ASC""".format(sys.argv[4])
+            WHERE name LIKE '{}'
+            ORDER BY id""".format(sys.argv[4])
     cursor.execute(query)
     rows = cursor.fetchall()
 
