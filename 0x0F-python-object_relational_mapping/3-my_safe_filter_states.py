@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # fetch all the states from the database
     cursor.execute("SELECT id, name FROM states\
                    WHERE name LIKE BINARY %s\
-                   ORDER BY id", (sys.argv[4]))
+                   ORDER BY id", (sys.argv[4],))
     rows = cursor.fetchall()
 
     for row in rows:
