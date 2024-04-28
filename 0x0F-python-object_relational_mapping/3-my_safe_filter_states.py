@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """lists all states from the database hbtn_0e_0_usa and filter for states
-where the name matches the last argument provided This script should be 
+where the name matches the last argument provided This script should be
 safe from mysql injections"""
 import MySQLdb
 import sys
