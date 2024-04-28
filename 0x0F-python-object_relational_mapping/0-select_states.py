@@ -4,7 +4,7 @@ import MySQLdb;
 import sys
 
 if len(sys.argv) == 4:
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],\
+    db = MySQLdb.connect(host="localhost:3306", user=sys.argv[1],\
             password=sys.argv[2], db=sys.argv[3])
 
     cursor = db.cursor()
