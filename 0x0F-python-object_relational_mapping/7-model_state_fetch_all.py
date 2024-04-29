@@ -8,8 +8,9 @@ import sys
 if __name__ == "__main__":
     if len(sys.argv) == 4:
         # create an engine that connects to the MySQL Server
-        engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".\
-                format(sys.argv[1], sys.argv[2], sys.argv[3]))
+        engine = create_engine(
+                "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+                    sys.argv[1], sys.argv[2], sys.argv[3]))
 
         # Create a session maker bound to the engine
         Session = sessionmaker(bind=engine)
