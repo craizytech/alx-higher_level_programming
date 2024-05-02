@@ -19,12 +19,11 @@ if __name__ == '__main__':
     session = Session()
 
     # Query the database
-    state = session.query(State).order_by(State.id).first()
+    state = session.query(State).filter(State.name == sys.argv[4]).first()
 
     # Print the states according to the requirements
     if state:
-        if sys.argv[4] == state.name:
-            print("{}".format(state.id))
+            print(state.id)
     else:
         print("Not found")
 
