@@ -9,8 +9,8 @@ import sys
 if __name__ == '__main__':
     # Create the database connection
     engine = create_engine(
-            "mysql+mysqldb://{}:{}@localhost:3306/{}".format(sys.argv[1],\
-                    sys.argv[2], sys.argv[3]))
+            "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+                sys.argv[1], sys.argv[2], sys.argv[3]))
 
     # Create a Session object and bind to the engine
     Session = sessionmaker(bind=engine)
@@ -25,3 +25,6 @@ if __name__ == '__main__':
     for state in states:
         if 'a' in state.name:
             print("{}: {}".format(state.id, state.name))
+
+    # Close the session out
+    session.close()
