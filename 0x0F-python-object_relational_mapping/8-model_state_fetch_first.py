@@ -19,13 +19,13 @@ if __name__ == "__main__":
         session = Session()
 
         # query the db to fetch all State objects and sort them by id
-        state = session.query(State).order_by(State.id).first()
+        states = session.query(State).order_by(State.id).first()
 
         # Display the results
-        if state:
+        if:
             print("{}: {}".format(state.id, state.name))
         else:
-            print("")
+            print("Nothing")
 
         # Close the session
         session.close()
