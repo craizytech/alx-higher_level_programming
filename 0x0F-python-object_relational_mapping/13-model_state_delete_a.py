@@ -19,12 +19,13 @@ if __name__ == '__main__':
     session = Session()
 
     # Query the database
-    states = session.query(State).order_by(State.id).all()
+    # states = session.query(State).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%a%')).all()
 
     # Print the states according to the requirements
     for state in states:
-        if 'a' in state.name:
-            session.delete(state)
+        # if 'a' in state.name:
+        session.delete(state)
 
     # Commit the transaction
     session.commit()
