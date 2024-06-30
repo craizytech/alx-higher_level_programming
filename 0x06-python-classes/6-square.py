@@ -49,6 +49,7 @@ class Square:
         """This method prints out the square to the stdout using # character"""
         if self.__size == 0:
             print()
+            return
 
         print('\n' * self.__position[1], end='')
 
