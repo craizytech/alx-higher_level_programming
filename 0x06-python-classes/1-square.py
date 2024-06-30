@@ -5,6 +5,6 @@
 class Square:
     """This is the Square class."""
     
-    def __init__(self):
+    def __init__(self, size=None):
         """This is the constructor method"""
-        __size = None
+        __size = size
