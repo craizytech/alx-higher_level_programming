@@ -7,4 +7,4 @@ class Square:
     
     def __init__(self, size=None):
         """This is the constructor method"""
-        self._size = size
+        self.__size = size
