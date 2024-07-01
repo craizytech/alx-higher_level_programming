@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This a linked list data structure"""
+"""This module contains 2 classes that implements a singly linked list."""
 
 
 class Node:
