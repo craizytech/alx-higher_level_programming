@@ -52,17 +52,16 @@ class Square:
 
         for i in range(self.__size):
             print(' ' * self.__position[0] + "#" * self.__size)
-    
+
     def __str__(self):
         "This method presents the informal representation of the square"
         if self.size == 0:
             return ''
-        
+
         square = []
         square.append('\n' * self.__position[1])
-        
+
         for i in range(self.__size):
             square.append(' ' * self.__position[0] + "#" * self.__size + "\n")
-        
-        return ''.join(square).rstrip()
 
+        return ''.join(square).rstrip()
