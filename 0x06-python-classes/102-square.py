@@ -35,21 +35,21 @@ class Square:
     def __ne__(self, other):
         """This method checks if 2 squares are not equal based on the area"""
         return (self.__size ** 2) != (other.size ** 2)
-    
+
     def __gt__(self, other):
         """This method checks of the 2 squares which is the bigger one"""
         return (self.__size ** 2) > (other.size ** 2)
-    
+
     def __ge__(self, other):
         """This method checks if the square\
                 is greater than or equal of the other square"""
         return (self.__size ** 2) >= (other.size ** 2)
-    
+
     def __lt__(self, other):
         """This method checks wether the current\
                 square is less than the other one"""
         return (self.__size ** 2) < (other.size ** 2)
-    
+
     def __le__(self, other):
         """This method checks wether a square\
                 is less than or equal to the other"""
