@@ -21,7 +21,7 @@ def main():
 
     # Check if N is atleast 4
     if N < 4:
-        print("N must be atleast 4")
+        print("N must be at least 4")
         sys.exit(1)
 
     # Initialize the solutions list and the board
@@ -35,10 +35,11 @@ def main():
     for solution in solutions:
         print(solution)
 
+
 def solve(board, row, N, solutions):
     """
     Recursive function to solve the N-Queens problem using backtracking
-    
+
     Args:
         board (matrix): the current state of the chessboard
         row: The current row to place a queen
@@ -60,6 +61,7 @@ def solve(board, row, N, solutions):
             # Backtrack: remove the queen and try the next column
             board[row][col] = 0
 
+
 def is_valid(board, row, col, N):
     """
     checks if its safe to place a queen at board[row][col].
@@ -77,7 +79,7 @@ def is_valid(board, row, col, N):
             return False
 
     # Check the major diagonal (top-left to bottom-right)
-    for i, j in zip(range(row -1, -1, -1), range(col - 1, -1, -1)):
+    for i, j in zip(range(row - 1, -1, -1), range(col - 1, -1, -1)):
         if board[i][j] == 1:
             return False
 
@@ -87,6 +89,7 @@ def is_valid(board, row, col, N):
             return False
 
     return True
+
 
 def convert_board_to_solution_format(board, N):
     """
@@ -104,6 +107,7 @@ def convert_board_to_solution_format(board, N):
             if board[row][col] == 1:
                 solution.append([row, col])
     return solution
+
 
 if __name__ == "__main__":
     main()
