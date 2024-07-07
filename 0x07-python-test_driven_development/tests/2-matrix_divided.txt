@@ -1,0 +1,65 @@
+===============================
+ How to Use 2-matrix_divide.py
+===============================
+
+The module matrix divided contains the method matrix_divided that
+divides the matrix by div and return the new matrix
+
+matrix_divided() takes 2 positional parameters matrix and div.
+divided the elements in the rows in the matrix and returns the new
+matrix
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix_divided([[1,2,3],[4,5,6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+we can also pass floats as values in matrix  and div
+::
+    >>> matrix_divided([[1.5,2.1,3.2],[4.3,5.4,6.5]], 3.6)
+    [[0.42, 0.58, 0.89], [1.19, 1.5, 1.81]]
+
+The function throws an error incase no parameter is passed
+::
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+The function also throws an error if only 1 parameter is passed
+::
+    >>> matrix_divided([[1.5,2.1,3.2],[4.3,5.4,6.5]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+The function also throws an error if matrix parameter is not of type list
+::
+    >>> matrix_divided('string', 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+This function also throws an error if all the elements of the matrix isnt
+of the object type list
+::
+    >>> matrix_divided(['string', [1,2,3]], 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+This function also throws an error if the rows in the matrix are not of the same size
+::
+    >>> matrix_divided([[1,2,3],[4,5,6,7]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+This function throws an error if the div parameter isnt a int
+or a float
+::
+    >>> matrix_divided([[1,2,3],[4,5,6]], 'string')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+This function also throws an error if div is 0 cause you cannot
+divide by 0
+::
+    >>> matrix_divided([[1,2,3],[4,5,6]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
