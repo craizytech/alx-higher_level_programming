@@ -1,0 +1,33 @@
+============================
+How to use 3-say_my_name.txt
+============================
+
+This module contains a function that prints the names passed to It
+
+say_my_name(first_name, last_name="") prints the names passed to it
+all the arguments should be a string raise a type error otherwise.
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Eammon", "Kiprotich")
+    My name is Eammon Kiprotich
+
+This function accepts 2 parameters but only requires that only the
+first_name is passed the last_name defaults to an empty string
+::
+    >>> say_my_name("Eammon")
+    My name is Eammon 
+
+This function raises a TypeError if parameters that are not of type
+string are passed
+::
+    >>> say_my_name(1,2)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name("a", 2)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+
+
