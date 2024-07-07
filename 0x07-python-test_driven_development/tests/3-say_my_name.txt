@@ -29,5 +29,10 @@ string are passed
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
+This raises a TypeError if no parameters are passed
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 
