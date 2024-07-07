@@ -45,5 +45,12 @@ when called without a parameter it throws an exception meaning a must be provide
     >>> add_integer(4)
     102
 
+This method throws an error when infinity is passed onto it since it is not a real number
+::
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+
 
 
