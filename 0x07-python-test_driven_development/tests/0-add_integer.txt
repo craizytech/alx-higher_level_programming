@@ -51,11 +51,11 @@ This method throws an error when infinity is passed onto it since it is not a re
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
-This method throws an error incase None is passed to it
+This method throws an error incase float('nan') is passed to it
 ::
-    >>> add_integer(None)
+    >>> add_integer(float('nan'))
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    ValueError: cannot convert float NaN to integer
 
 
 
