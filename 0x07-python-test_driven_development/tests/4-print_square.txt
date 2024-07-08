@@ -26,4 +26,11 @@ than 0 it raises a ValueError
     Traceback (most recent call last):
     ValueError: size must be >= 0
 
+When no parameters are passed this function throws an error
+
+::
+>>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
 
