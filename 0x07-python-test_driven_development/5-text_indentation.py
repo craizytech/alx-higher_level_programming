@@ -17,7 +17,7 @@ def text_indentation(text):
     sentence = ""
 
     for char in text:
-        if char in ['.','?',':']:
+        if char in ['.', '?', ':']:
             sentence += char
             sentences.append(sentence.strip())
             sentence = ""
