@@ -1,0 +1,29 @@
+============================
+How to use 4-print_square.py
+============================
+
+This module prints a square. It contains the function print_square
+
+print_square(size) takes on a parameter size and prints the print_square
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+This function takes size as a parameter and size should be of int
+type and >= 0 any other type raises TypeError and if the int is less
+than 0 it raises a ValueError
+
+::
+    >>> print_square('string')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+
