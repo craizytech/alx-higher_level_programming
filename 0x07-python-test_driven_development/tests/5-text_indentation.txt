@@ -1,0 +1,29 @@
+================================
+How to use 5-text_indentation.py
+================================
+
+This module contains the function text_indentation that prints the
+text passed to it but also prints 2 extra lines after the characters
+., ?, :
+
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("I.am?writing:tests")
+    I.
+    <BLANKLINE>
+    am?
+    <BLANKLINE>
+    writing:
+    <BLANKLINE>
+    tests
+
+This function throws an error incase a non-string type is passed to the function
+::
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+When a normal string is passed it just prints normally
+::
+    >>> text_indentation("This is a text indentation")
+    This is a text indentation
