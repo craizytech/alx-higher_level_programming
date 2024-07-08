@@ -27,3 +27,9 @@ When a normal string is passed it just prints normally
 ::
     >>> text_indentation("This is a text indentation")
     This is a text indentation
+
+When no argument is passed to the function it throws a type error
+::
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
