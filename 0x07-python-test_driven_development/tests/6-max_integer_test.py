@@ -18,6 +18,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_list_with_nonint(self):
         with self.assertRaises(TypeError):
             max_integer([1, 'a'])
+    def test_list_negative_int(self):
+        self.assertEqual(max_integer([-1,-2,-5,-6]), -1)
+        self.assertEqual(max_integer([-1,-2, 3, 4]), 4)
+    
+    def test_list_one(self):
+        self.assertEqual(max_integer([1]), 1)
 
 if __name__ == "__main__":
     unittest.main()
