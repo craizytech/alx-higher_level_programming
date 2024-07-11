@@ -21,7 +21,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-2,-1,-3,-4,-5]), -1)
         self.assertEqual(max_integer([1,2,-3,4,5]),5)
         self.assertEqual(max_integer([1.1, 2.3, 4.5, 6, 7.5]), 7.5)
-        self.assertEqual(max_integer([-4], -4)
+        self.assertEqual(max_integer([-4]), -4)
     
     def test_list_with_nonint(self):
         with self.assertRaises(TypeError):
