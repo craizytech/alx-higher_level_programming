@@ -14,18 +14,15 @@ class TestMaxInteger(unittest.TestCase):
     
     def test_list_with_int(self):
         self.assertEqual(max_integer([1,2,4]), 4)
+        self.assertEqual(max_integer([5]), 5)
+        self.assertEqual(max_integer([1,2,3,4,5]),5)
+        self.assertEqual(max_integer([6,2,3,4,5]),6)
+        self.assertEqual(max_integer([1,2,6,4,5]),6)
+        self.assertEqual(max_integer([-2,-1,-3,-4,-5]), -1)
+        self.assertEqual(max_integer([1,2,-3,4,5]),5)
+        self.assertEqual(max_integer([1.1, 2.3, 4.5, 6, 7.5]), 7.5)
+        self.assertEqual(max_integer([-4], -4)
     
     def test_list_with_nonint(self):
         with self.assertRaises(TypeError):
             max_integer([1, 'a'])
-
-    def test_list_negative_int(self):
-        self.assertEqual(max_integer([-1,-2,-5,-6]), -1)
-        self.assertEqual(max_integer([-1,-2, 3, 4]), 4)
-        self.assertEqual(max_integer([1, 2, -3, 4]), 4)
-    
-    def test_list_one(self):
-        self.assertEqual(max_integer([1]), 1)
-
-if __name__ == "__main__":
-    unittest.main()
