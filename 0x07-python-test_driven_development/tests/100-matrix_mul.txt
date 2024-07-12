@@ -91,3 +91,7 @@ Non-int and non-float types in the lists raises an error
 	>>> matrix_mul([[1,'b'], [3, 4]],[[1,2],[3,4]])
 	Traceback (most recent call last):
 	TypeError: m_a should contain only integers or floats
+
+	>>> matrix_mul('string',[[1,2],[3,4]])
+	Traceback (most recent call last):
+	TypeError: m_a must be a list
