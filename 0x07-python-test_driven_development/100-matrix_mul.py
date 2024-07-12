@@ -20,6 +20,9 @@ def matrix_mul(m_a, m_b):
     for row in m_a:
         if not isinstance(row, list):
             raise TypeError("m_a must be a list of lists")
+
+        if len(row) != len(m_a[0]):
+            raise TypeError("each row of m_a must be of the same size")
         
         for _ in row:
             if not isinstance(_, (int, float)):
@@ -28,7 +31,10 @@ def matrix_mul(m_a, m_b):
     for row in m_b:
         if not isinstance(row, list):
             raise TypeError("m_b must be a list of lists")
-        
+
+        if len(row) != len(m_b[0]):
+            raise TypeError("each row of m_b must have the same size")
+
         for _ in row:
             if not isinstance(_, (int, float)):
                 raise TypeError("m_b should contain only integers or floats")
@@ -38,9 +44,12 @@ def matrix_mul(m_a, m_b):
     
     if m_b == [] or m_b == [[]]:
         raise ValueError("m_b can't be empty")
+
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
     
     m = len(m_a)         # Number of rows in the first matrix 
-    n = len(m_a[0])      # Nuber of columns in m_a (and number of rows in 2nd matrix)
+    n = len(m_a[0])      # Nuber of columns in m_a (no of rows in m_b)
     p = len(m_b[0])      # Number of columns in B
 
     # Initialize matrix C with zeros of size m * p
@@ -54,5 +63,3 @@ def matrix_mul(m_a, m_b):
             C[i][j] = sum
     
     return C
-
-

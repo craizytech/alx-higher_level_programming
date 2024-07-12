@@ -1,0 +1,93 @@
+============================
+How to use 100-matrix_mul.py
+============================
+
+The module contains a function that performs matrix multiplication the matrix
+should be a list of lists and only contain numbers or floats. Anything else should
+raise an error. And also another rule is the number of columns in the 1st matrix
+m_a should be equal to the number of rows in the second matrix otherwise this should raise an error too.
+
+function: matrix_mul(ma, m_b) this functin takes 2 matrixes, performs multiplication and returns the resulting matrix.
+
+Numbers
+=======
+This function multiplies the 2 matrixes provided the no of columns in the 1st matrix should be equal to the number of rows in the second matrix.
+::
+	>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+	>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+	[[7, 10], [15, 22]]
+
+Floats
+======
+This function also accepts floats as values for the items/elements in the list
+::
+	>>> matrix_mul([[1.2, 2.2],[3.1, 4.1]],[[1.1, 2.1],[3.1,4.1]])
+	[[8.14, 11.54], [16.12, 23.32]]
+
+Numbers and Floats
+==================
+This function works well with floats and numbers
+::
+	>>> matrix_mul([[1.2, 2],[3, 4.1]],[[3, 2.1],[3.1,4]])
+	[[9.8, 10.52], [21.71, 22.7]]
+
+Missing arguments
+=================
+Missing arguments throws an error
+::
+	>>> matrix_mul([])
+	Traceback (most recent call last):
+	TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+	>>> matrix_mul()
+	Traceback (most recent call last):
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+
+Empty list
+==========
+if the any of the lists is then the function throws an error
+::
+	>>> matrix_mul([],[])
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
+
+	>>> matrix_mul([[]],[[]])
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
+
+	>>> matrix_mul([[1,2], [3, 4]],[[]])
+	Traceback (most recent call last):
+	ValueError: m_b can't be empty
+
+Incorrect order (col in m_a == rows in m_b)
+===========================================
+The number of columns in the first matrix should be equal to 
+the number of rows in the 2nd matrix. Otherwise it throws an error
+::
+
+
+
+
+Uneven number of rows in any of the matrixes throws an error
+============================================================
+::
+	>>> matrix_mul([[1,2], [3, 4], [5,6,7]],[[1,2],[3,4]])
+	Traceback (most recent call last):
+	TypeError: each row of m_a must be of the same size
+
+	>>> matrix_mul([[1,2], [3, 4]],[[1,2],[3,4], [5,6,7]])
+	Traceback (most recent call last):
+	TypeError: each row of m_b must have the same size
+
+
+Non-int and non-float types in the lists raises an error
+========================================================
+::
+	>>> matrix_mul([[1,2], [3, 4]],[[1,2],[3,'a']])
+	Traceback (most recent call last):
+	TypeError: m_b should contain only integers or floats
+
+	>>> matrix_mul([[1,'b'], [3, 4]],[[1,2],[3,4]])
+	Traceback (most recent call last):
+	TypeError: m_a should contain only integers or floats
