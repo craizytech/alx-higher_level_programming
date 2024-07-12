@@ -33,7 +33,7 @@ def matrix_mul(m_a, m_b):
             raise TypeError("m_b must be a list of lists")
 
         if len(row) != len(m_b[0]):
-            raise TypeError("each row of m_b must have the same size")
+            raise TypeError("each row of m_b must be of the same size")
 
         for _ in row:
             if not isinstance(_, (int, float)):
