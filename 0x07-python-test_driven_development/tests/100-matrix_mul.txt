@@ -65,6 +65,9 @@ Incorrect order (col in m_a == rows in m_b)
 The number of columns in the first matrix should be equal to 
 the number of rows in the 2nd matrix. Otherwise it throws an error
 ::
+	>>> matrix_mul([[1,2], [3, 4]],[[1,2,3,4]])
+	Traceback (most recent call last):
+	ValueError: m_a and m_b can't be multiplied
 
 
 
@@ -95,3 +98,14 @@ Non-int and non-float types in the lists raises an error
 	>>> matrix_mul('string',[[1,2],[3,4]])
 	Traceback (most recent call last):
 	TypeError: m_a must be a list
+
+	>>> matrix_mul([[1,2], [3, 4]],'string')
+	Traceback (most recent call last):
+	TypeError: m_b must be a list
+
+Some errors
+===========
+::
+>>> matrix_mul([[1,2], [3, 4]],[1,2,3,4])
+Traceback (most recent call last):
+TypeError: m_b must be a list of lists
