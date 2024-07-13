@@ -1,0 +1,38 @@
+=============================
+How to use 7-base_geometry.py
+=============================
+
+This module defines the BaseGeometry class and the various methods
+that are in that class
+
+We can create an instance of the BaseGeometry
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> new_instance = BaseGeometry()
+
+The area method hasn't been implemented yet trying to use it will raise an exception
+::
+    >>> new_instance.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+The integer validator method raises an error when a value that 
+isnt an integer is passed to it and also when that integer is < 0.
+
+    >>> new_instance.integer_validator("age", 21)
+
+    >>> new_instance.integer_validator("age", "string")
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> new_instance.integer_validator("age", -4)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+    >>> new_instance.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+    >>> new_instance.integer_validator("age", 2.5)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
