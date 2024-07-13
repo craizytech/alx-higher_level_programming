@@ -27,3 +27,9 @@ an empty list just prints an empty list
     >>> empty_list.print_sorted()
     []
 
+a list with negative numbers are also sorted
+::
+    >>> neg_list = MyList()
+    >>> neg_list += [-1, -2, 3, -4]
+    >>> neg_list.print_sorted()
+    [-4, -2, -1, 3]
