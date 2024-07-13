@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """This defines how attributes can be added to an object dynamicaly"""
 
-def add_attributes(obj, attr_name, attr_value):
+
+def add_attribute(obj, attr_name, attr_value):
     """
     Add a new attribute to an object if possible
 
