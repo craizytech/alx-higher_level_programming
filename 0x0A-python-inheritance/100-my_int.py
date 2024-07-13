@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module creates a class that inherits from int"""
 
+
 class MyInt(int):
     """This class inherits from int and alters the magic methods"""
 
