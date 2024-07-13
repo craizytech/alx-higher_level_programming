@@ -1,0 +1,22 @@
+=======================
+How to use 1-my_list.py
+=======================
+
+This module defines the class My_list that extends the list class
+and adds the functionality to sort and print the list
+
+This list sorts numbers but does not change the original list
+::
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 3, 2, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 3, 2, 5]
