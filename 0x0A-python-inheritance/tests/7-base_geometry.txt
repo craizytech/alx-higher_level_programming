@@ -21,6 +21,14 @@ isnt an integer is passed to it and also when that integer is < 0.
 
     >>> new_instance.integer_validator("age", 21)
 
+    >>> new_instance.integer_validator() #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator()...
+
+    >>> new_instance.integer_validator("age") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator()...
+
     >>> new_instance.integer_validator("age", "string")
     Traceback (most recent call last):
     TypeError: age must be an integer
@@ -56,11 +64,3 @@ isnt an integer is passed to it and also when that integer is < 0.
     >>> new_instance.integer_validator("age", True)
     Traceback (most recent call last):
     TypeError: age must be an integer
-
-    >>> new_instance.integer_validator() #doctest: +ELLIPSIS
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator()...
-
-    >>> new_instance.integer_validator("age") #doctest: +ELLIPSIS
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator()...
