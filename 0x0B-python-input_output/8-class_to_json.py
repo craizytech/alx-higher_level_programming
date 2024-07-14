@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Class to JSON"""
-import json
 
 
 def class_to_json(obj):
@@ -12,4 +11,4 @@ def class_to_json(obj):
 
     Returns: the dictionary representation of an object in JSON
     """
-    return json.dumps(vars(obj))
+    return obj.__dict__
