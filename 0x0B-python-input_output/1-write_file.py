@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module writes to a file"""
 
+
 def write_file(filename="", text=""):
     """
     This method writes to a file.
