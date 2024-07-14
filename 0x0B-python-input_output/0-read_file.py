@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """This module reads a test file and prints it out to stdout"""
 
 
