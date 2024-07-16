@@ -29,4 +29,5 @@ class Student:
         Args:
             json (dictionary): dictionary containing attributes to replace
         """
-        self.__dict__ = json.copy()
+        for k,v in json.items():
+            self.__dict__[k] = v
