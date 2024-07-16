@@ -83,8 +83,11 @@ class Rectangle(Base):
 
     def display(self):
         """Prints the Rectangle instance to the stdout"""
+        for i in range(self.__y):
+            print()
+
         for i in range(self.__height):
-            print("#" * self.__width + '\n', end="")
+            print(" " * self.__x + "#" * self.__width + '\n', end="")
 
     def __str__(self):
         """This method returns an informal representation of the object"""
