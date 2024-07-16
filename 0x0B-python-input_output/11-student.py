@@ -21,7 +21,7 @@ class Student:
         if type(attrs) is list:
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
-    
+
     def reload_from_json(self, json):
         """
         this method replaces all the attributes of Student instance
@@ -29,5 +29,5 @@ class Student:
         Args:
             json (dictionary): dictionary containing attributes to replace
         """
-        for k,v in json.items():
+        for k, v in json.items():
             self.__dict__[k] = v
