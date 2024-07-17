@@ -101,7 +101,7 @@ class Rectangle(Base):
 
         Args:
             args: list of arguments
-            kwargs: dictionary of 
+            kwargs: dictionary of
         """
         if len(args) > 0:
             for arg in args:
