@@ -3,35 +3,39 @@
 from models.base import Base
 import unittest
 
-class TestBase(unittest.TestCase):
-    """This class tests the Base class"""
+class TestBaseInstantiation(unittest.TestCase):
+    """This class tests instantiation of the Base class"""
 
-    def setUp(self):
-        """Runs before each method is run"""
-        self.instance_one = Base()
-        self.instance_two = Base()
-        self.instance_three = Base()
-        self.instance_four = Base(12)
+    def test_no_arg(self):
+        """This method tests the base when no Id is passed"""
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, b2.id - 1)
 
-    def tearDown(self):
-        """Runs after each method is run"""
-        del(self.instance_one)
-        del(self.instance_two)
-        del(self.instance_three)
-        del(self.instance_four)
+    def test_None_id(self):
+        """This method tests the base when the Id passed is None"""
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, b2.id - 1)
+
+    def test_unique_id(self):
+        """This method tests the base when an object is instantiated with id"""
+        self.assertEqual(67, Base(67).id)
+
+    def test_when_given_id(self):
+        """This method tests when an base is instantiated with an id"""
+        b1 = Base()
+        b2 = Base(12)
+        b3 = Base()
+        self.assertEqual(b1.id, b3.id - 1)
 
     def test_private_attributes(self):
-        """This method checks the private attributes of the class"""
+        """Tests to ensure private attributes remain private"""
         with self.assertRaises(AttributeError):
-            self.instance_one.__nb_objects
+            print(Base(12).__nb_instances)
 
-    def test_id(self):
-        """This method tests the id attribute"""
-        self.assertEqual(self.instance_one.id, 1)
-        self.assertEqual(self.instance_two.id, 2)
-        self.assertEqual(self.instance_three.id, 3)
-        self.assertEqual(self.instance_four.id, 12)
-        self.assertNotEqual(self.instance_one, self.instance_three)
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_many_args(self):
+        """This method tests when more than enough arguments are passed"""
+        with self.assertRaises(TypeError):
+            Base(1, 2)
+    

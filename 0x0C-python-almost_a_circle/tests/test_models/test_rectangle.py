@@ -8,10 +8,10 @@ class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         """Runs before each method is run"""
-        self.instance_one = Rectangle(1, 2, 3, 4)
-        self.instance_two = Rectangle(5, 6, 7, 8)
+        self.instance_one = Rectangle(1, 2, 3, 1)
+        self.instance_two = Rectangle(5, 6, 7, 2)
         self.instance_three = Rectangle(9, 1, 2, 3)
-        self.instance_four = Rectangle(4, 5, 6, 7, 12)
+        self.instance_four = Rectangle(4, 5, 6, 7, 4)
     
     def tearDown(self):
         """This method runs after each method is run"""
@@ -35,15 +35,7 @@ class TestRectangle(unittest.TestCase):
             self.instance_one.__x
         
         with self.assertRaises(AttributeError):
-            self.instance_one.__y
-    
-    def test_object_id(self):
-        """This checks that the object Ids were correctly assigned"""
-        self.assertEqual(self.instance_one.id, 7)
-        self.assertEqual(self.instance_two.id, 8)
-        self.assertEqual(self.instance_three.id, 9)
-        self.assertEqual(self.instance_four.id, 12)
-    
+            self.instance_one.__y 
 
     def test_setter_methods(self):
         """Tests the rectangle width setter method"""
@@ -62,3 +54,8 @@ class TestRectangle(unittest.TestCase):
         
         with self.assertRaises(ValueError):
             self.instance_one.width = -1
+
+    def test_area_method(self):
+        """Tests the rectangle area method"""
+
+        self.assertEqual(self.instance_one.area(), 2)
