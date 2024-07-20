@@ -586,3 +586,6 @@ class TestRectangle_stdout(unittest.TestCase):
         r = Rectangle(1, 2, 3, 4)
         with self.assertRaises(TypeError):
             r.display(1)
+
+class TestRectangle_update_args(unittest.TestCase):
+    """Unittest """
