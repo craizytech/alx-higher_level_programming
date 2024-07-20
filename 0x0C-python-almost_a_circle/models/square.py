@@ -12,4 +12,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """This method returns the informal representation of the object"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
