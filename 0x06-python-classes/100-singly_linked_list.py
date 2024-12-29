@@ -1,69 +1,76 @@
 #!/usr/bin/python3
-"""This module contains 2 classes that implements a singly linked list."""
-
+"""This module implements a singly linked list"""
 
 class Node:
-    """This class represents the structure of the node"""
-
+    """This class defines a single node"""
     def __init__(self, data, next_node=None):
-        """This is the constructor method"""
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """This is the data getter"""
         return self.__data
-
+    
     @data.setter
     def data(self, value):
-        """Data setter"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
+        
         self.__data = value
 
+    # next node
     @property
     def next_node(self):
-        """Next node getter."""
         return self.__next_node
-
+    
     @next_node.setter
     def next_node(self, value):
-        """next_node setter"""
-        if not (isinstance(value, Node) or value is None):
+        if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
 class SinglyLinkedList:
-    """This data structure defines a single linked list"""
 
     def __init__(self):
-        """constructor"""
+        """This is the constructor method"""
         self.__head = None
 
-    def __str__(self):
-        current = self.__head
+    def __repr__(self):
+        """Prints the object representation"""
         nodes = []
+        dummy_node = self.__head
 
-        while current is not None:
-            nodes.append(str(current.data))
-            current = current.next_node
+        while dummy_node:
+            nodes.append(str(dummy_node.data))
+            dummy_node = dummy_node.next_node
+        
         return "\n".join(nodes)
-
+    
     def sorted_insert(self, value):
-        """This method inserts the value inside the linked list"""
+        """
+        This method inserts a value into the correct position in the linked list
+        """
+        if not self.__head:
+            new_node = Node(value)
+            self.__head = new_node
+            return
+        
+        if self.__head.data > value:
+            new_node = Node(value)
+            new_node.next_node = self.__head
+
+            self.__head = new_node
+            return
+
+        current_node = self.__head
+        prev_node = None
+
+        while current_node and current_node.data < value:
+            prev_node = current_node
+            current_node = current_node.next_node
 
         new_node = Node(value)
-
-        if self.__head is None or self.__head.data >= value:
-            new_node.next_node = self.__head
-            self.__head = new_node
-        else:
-            current = self.__head
-            while current.next_node is not None and
-            current.next_node.data < value:
-                current = current.next_node
-
-            new_node.next_node = current.next_node
-            current.next_node = new_node
+        new_node.data = value
+        new_node.next_node = current_node
+        prev_node.next_node = new_node
