@@ -31,6 +31,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """This class creates a singly linked list"""
 
     def __init__(self):
         """This is the constructor method"""
